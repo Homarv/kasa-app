@@ -1,0 +1,31 @@
+.banner{
+    height: 15rem;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    color: white;
+	background-position: center;
+	background-size: cover;
+	padding: 1em;
+    &--home{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                          url('../../assets/banner_home.svg'); 
+    }
+    &--apropos{
+        background-image: url('../../assets/banner_apropos.svg'); 
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .banner{
+        height: 8rem;
+        justify-content: left;
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,30 @@
+.footer{
+    background-color: black;
+    color: white;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 7rem;
+    }
+    p{
+        margin-top: 1rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .footer{
+        height: 10rem;
+        img{
+            width: 4rem;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+    }
+}

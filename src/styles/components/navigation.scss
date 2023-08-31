@@ -1,0 +1,38 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em;
+    ul{
+        display: flex;
+        li{
+            margin-left: 3em;
+        }
+    }
+    a{
+        text-decoration: none;
+        list-style: none;
+        @extend %primary-color;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .navigation{
+        flex: 1 ;
+        padding: 2rem;
+        img {
+            max-width: 8rem;
+            margin-bottom: 1rem; // Ajouter de l'espace sous le logo
+        }
+        ul {
+            li {
+                text-transform: uppercase; 
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+  

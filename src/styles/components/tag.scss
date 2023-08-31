@@ -1,0 +1,11 @@
+.tags_container{
+    display: flex; 
+}
+
+.tag{
+    @extend %style;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    margin: 2rem 1rem 0rem 0rem;
+
+}

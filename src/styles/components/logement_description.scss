@@ -1,0 +1,39 @@
+.information{
+    @extend %primary-color;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    &_title_name{
+    }
+    &_name{
+        margin-right: 3rem;
+        font-size: 1.2rem;
+    }
+    h2{
+        margin-top: 0.7rem;
+        font-size: 1.2rem;
+    }
+}
+
+.container_name_star{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.star{
+    font-size: 10rem;
+}
+
+
+@media only screen and (max-width: $mobile) {
+    .information{
+        display: block;
+    }
+    .container_name_star{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
