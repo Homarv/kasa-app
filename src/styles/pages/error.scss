@@ -1,19 +1,17 @@
-
-.alert-error{
-    @extend %primary-color;
-    margin-top: 3rem;
-    text-align: center;
-    text-decoration: none;
-    h1{
-        font-size: 18rem;
-    }
-    p{
-        font-size: 1.5rem;
-    }
-    .custom-link {
-        margin-top: 5rem;
-        color: inherit;
-        font-size: 1.5rem;
-    }
-
+.alert-error {
+	@extend %primary-color;
+	margin-top: 3rem;
+	text-align: center;
+	text-decoration: none;
+	h1 {
+		font-size: 18rem;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+	.custom-link {
+		margin-top: 5rem;
+		color: inherit;
+		font-size: 1.5rem;
+	}
 }

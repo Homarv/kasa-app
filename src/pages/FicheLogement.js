@@ -16,15 +16,16 @@ const FicheLogement = () => {
     useEffect(() => {
       // Trouver le logement correspondant à l'ID dans les données
       const logementData = data.find(item => item.id.toString() === id);
-      setLogement(logementData);
-    }, [id]);
-  
-    if (!logement) {
+      if (logementData){
+        setLogement(logementData);
+      }
+      else{
         navigate("/erreur"); 
-        return null; // Retourner null pour empêcher le rendu du reste du composant
-    }
-    
-    return (
+        return null;
+      }
+    }, [id, navigate]);
+
+    return logement ? (
       <div className="logement_description">
         <Caroussel pictures={logement.pictures}/>
         <div className='information'>
@@ -38,7 +39,7 @@ const FicheLogement = () => {
               <p className='first-name'>{logement.host.name.split(' ')[0]}</p>
               <p className='last-name'>{logement.host.name.split(' ')[1]}</p>
             </div>
-             <Star className='star 'rating={logement.rating}/>
+             <Star rating={logement.rating}/>
           </div>
         </div>
         <div className='logement_collapse_container'>
@@ -46,7 +47,7 @@ const FicheLogement = () => {
           <Collapse className='collapse--logement'title={"Equipements"} description={logement.equipments}/>
         </div>
       </div>
-    );
+    ): null;
 };
 
 
