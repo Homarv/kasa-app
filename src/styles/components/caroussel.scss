@@ -5,7 +5,7 @@
 
 	img {
 		width: 100%;
-		height: 30rem;
+		height: 415px;
 		object-fit: cover;
 		border-radius: 20px;
 	}
@@ -40,7 +40,7 @@
 @media only screen and (max-width: $mobile) {
 	.caroussel {
 		img {
-			height: 20rem;
+			height: 225px;
 		}
 		.prev,
 		.next {
