@@ -20,7 +20,7 @@ const FicheLogement = () => {
 			setLogement(logementData);
 		} else {
 			navigate("/erreur");
-			return null;
+			//return null;
 		}
 	}, [id, navigate]);
 

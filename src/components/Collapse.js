@@ -5,20 +5,20 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Collapse = ({ title, description, className }) => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isClose, setIsClose] = useState(true);
 
-	return isOpen ? (
+	return isClose ? (
 		<div className={`collapse ${className ? className : ""}`}>
 			<div className="collapse_bar">
 				<div className="collapse_title">{title}</div>
-				<FontAwesomeIcon icon={faChevronUp} onClick={() => setIsOpen(false)} />
+				<FontAwesomeIcon icon={faChevronUp} onClick={() => setIsClose(false)} />
 			</div>
 		</div>
 	) : (
 		<div className={`collapse ${className ? className : ""}`}>
 			<div className="collapse_bar">
 				<div className="collapse_title">{title}</div>
-				<FontAwesomeIcon icon={faChevronDown} onClick={() => setIsOpen(true)} />
+				<FontAwesomeIcon icon={faChevronDown} onClick={() => setIsClose(true)} />
 			</div>
 			<div className="collapse_description">
 				{Array.isArray(description) ? (
